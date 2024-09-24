@@ -42,7 +42,6 @@
 }
 [data-theme="dark"] .trused-dark {
   display: flex;
-  padding: 20px;
 }
 body {
   max-width: 99svw;
@@ -297,6 +296,7 @@ svg rect {
 .trused-dark {
   gap: 64px;
   flex-wrap: wrap;
+  padding: 20px;
 }
 .trused,
 .trused-dark img {
