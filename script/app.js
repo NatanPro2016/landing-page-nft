@@ -4,6 +4,11 @@ const toogler = document.getElementById("toggler");
 // const left = document.getElementById("left");
 // const right = document.getElementById("right");
 const nfts = document.getElementById("nfts");
+const loader = document.getElementById("loader");
+
+window.addEventListener("load", () => {
+  loader.classList.add("hide");
+});
 
 // left.addEventListener("click", () => {
 //   nfts.scrollBy(-window.innerWidth, 0);
