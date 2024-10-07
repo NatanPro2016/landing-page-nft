@@ -44,7 +44,7 @@
   display: flex;
 }
 body {
-  max-width: 99svw;
+  max-width: 100svw;
   overflow-x: hidden;
   min-height: 100svw;
   display: flex;
@@ -58,7 +58,7 @@ body {
 }
 .loader-background {
   height: 100vh;
-  width: 100vw;
+  width: 100svw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +195,7 @@ navgation  */
   position: fixed;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100svw;
   max-width: 350px;
   position: fixed;
   background: var(--background);
@@ -206,7 +206,9 @@ navgation  */
 }
 .sidenav .nav-header {
   width: 100%;
+  height: 4rem;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   margin: 10px;
@@ -337,7 +339,9 @@ svg rect {
   position: absolute;
   top: 90vh;
   right: 30px;
-  text-shadow: 0 0 7px 15px #00000025;
+
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 .trused,
 .trused-dark {
@@ -402,7 +406,8 @@ svg rect {
   justify-content: center;
 }
 .whys .why {
-  width: 276px;
+  max-width: 276px;
+  width: 100%;
   height: 350px;
   border-radius: 25px;
   border: var(--border) solid 1px;
@@ -656,7 +661,7 @@ svg rect {
 }
 .lets-start .center h1 {
   font-size: 96px;
-  width: 475px;
+  max-width: 475px;
 }
 .lets-start .center p {
   font-size: 22px;
@@ -741,7 +746,7 @@ footer {
 footer .center {
   display: flex;
   justify-content: space-between;
-
+  text-align: center;
   padding-bottom: 50px;
 }
 footer .center .col:nth-child(1) {
@@ -956,10 +961,19 @@ footer .bold {
   }
   footer .center {
     flex-direction: column;
+    align-items: center;
     padding: 20px;
+  }
+  footer ul {
+    justify-content: center;
+    margin-block: 1.5rem;
   }
 }
 @media (max-width: 440px) {
+  footer ul {
+    align-items: center;
+    justify-content: center;
+  }
   .hero img {
     max-width: 80vw;
   }
