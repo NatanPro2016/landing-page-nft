@@ -6,9 +6,9 @@ This repository contains a simple, responsive landing page designed for promotin
 The landing page can be easily customized to showcase NFT collections,
 provide promotional information, or direct users to a marketplace.
 
-## Demo
+## live demo
+https://landing-pagenft.netlify.app/
 
-[![NFT Landing Page Demo](https://landing-pagenft.netlify.app/)
 
 ## Features
 
