@@ -259,6 +259,7 @@ navgation  */
 }
 header {
   position: absolute;
+  z-index: 999;
 }
 header .center {
   justify-content: space-between;
@@ -362,6 +363,7 @@ svg rect {
 .collection .center {
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .collection .nfts {
@@ -370,6 +372,8 @@ svg rect {
   align-items: center;
   margin-top: 65px;
   gap: 48px;
+  margin-bottom: 200px;
+
 }
 .collection .nft {
   transform: translateY(0px);
@@ -393,7 +397,6 @@ svg rect {
   margin-top: 10px;
   color: var(--text-light);
   font-size: 15px;
-  margin-bottom: 200px;
 }
 
 /* why page */

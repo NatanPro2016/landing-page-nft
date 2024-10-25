@@ -1,22 +1,13 @@
-const accordions = document.querySelectorAll(".accordion");
-const panel = document.querySelectorAll(".panel");
-const toogler = document.getElementById("toggler");
-// const left = document.getElementById("left");
-// const right = document.getElementById("right");
-const nfts = document.getElementById("nfts");
+//hiddeng page loading animation
 const loader = document.getElementById("loader");
 
 window.addEventListener("load", () => {
   loader.classList.add("hide");
 });
 
-// left.addEventListener("click", () => {
-//   nfts.scrollBy(-window.innerWidth, 0);
-// });
-
-// right.addEventListener("click", () => {
-//   nfts.scrollBy(window.innerWidth, 0);
-// });
+// creating accordions button functionality
+const panel = document.querySelectorAll(".panel");
+const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach((accordion, index) => {
   accordion.addEventListener("click", () => {
@@ -24,13 +15,18 @@ accordions.forEach((accordion, index) => {
     panel[index].classList.toggle("active");
   });
 });
+
+// dark mode auto select and button
 let dark = window.matchMedia("(prefers-color-scheme : dark)").matches;
 
 if (dark) {
   document.body.setAttribute("data-theme", "dark");
   toogler.classList.remove("dark");
 }
-toogler.addEventListener("click", () => {
+
+const dark_mode_toogler = document.getElementById("toggler");
+
+dark_mode_toogler.addEventListener("click", () => {
   if (dark) {
     document.body.removeAttribute("data-theme", "dark");
     dark = false;
@@ -42,7 +38,7 @@ toogler.addEventListener("click", () => {
   }
 });
 
-//creating the scroll animation
+//creating the scroll reveal  animation
 
 const cards = document.querySelectorAll(".card");
 const observer = new IntersectionObserver(
@@ -96,10 +92,27 @@ numbers.forEach((number) => {
 const navButton = document.getElementById("side-nav-button");
 const container = document.getElementById("container");
 const close = document.getElementById("close");
+let issidenavoped = false;
+container.addEventListener("click", () => {
+  if (issidenavoped) {
+    container.classList.remove("active");
+    issidenavoped = false;
+  }
+});
 
 navButton.addEventListener("click", () => {
   container.classList.add("active");
+  issidenavoped = true;
 });
+
 close.addEventListener("click", () => {
   container.classList.remove("active");
+  issidenavoped = false;
+});
+
+const links = document.querySelectorAll(".sidenav ul li a");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    container.classList.remove("active");
+  });
 });
