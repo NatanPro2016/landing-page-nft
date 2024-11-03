@@ -1,14 +1,16 @@
 ---
 
+<img src="https://landing-pagenft.netlify.app/img/cover.png" />
+
 # NFT Landing Page
 
-This repository contains a simple, responsive landing page designed for promoting NFT projects. 
+This repository contains a simple, responsive landing page designed for promoting NFT projects.
 The landing page can be easily customized to showcase NFT collections,
 provide promotional information, or direct users to a marketplace.
 
 ## live demo
-https://landing-pagenft.netlify.app/
 
+https://landing-pagenft.netlify.app/
 
 ## Features
 
@@ -22,7 +24,7 @@ https://landing-pagenft.netlify.app/
 
 ## Light & Dark Mode
 
-The landing page includes support for both **Light Mode** and **Dark Mode**. 
+The landing page includes support for both **Light Mode** and **Dark Mode**.
 The theme automatically adapts to the user's system preferences but can also be manually toggled using the button provided on the page.
 
 ### Features:
@@ -30,9 +32,7 @@ The theme automatically adapts to the user's system preferences but can also be 
 - **Auto-detect Mode**: The landing page detects and applies the user's system theme preference (light or dark mode).
 - **Manual Toggle**: Users can switch between light and dark modes manually using the toggle button on the page.
 
-
-
-## Usage                     
+## Usage
 
 You can edit the `index.html` file to update the following sections:
 
@@ -66,6 +66,3 @@ Feel free to contribute to this project by following these steps:
 4. Commit your changes (`git commit -am 'Add new feature'`).
 5. Push to your branch (`git push origin feature-branch`).
 6. Create a pull request.
-
-
-
