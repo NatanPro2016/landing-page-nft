@@ -1,7 +1,7 @@
 //hiddeng page loading animation
 const loader = document.getElementById("loader");
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   loader.classList.add("hide");
 });
 
