@@ -92,21 +92,25 @@ numbers.forEach((number) => {
 const navButton = document.getElementById("side-nav-button");
 const container = document.getElementById("container");
 const close = document.getElementById("close");
+const header = document.querySelector("header");
 let issidenavoped = false;
 container.addEventListener("click", () => {
   if (issidenavoped) {
     container.classList.remove("active");
+    header.classList.remove("active");
     issidenavoped = false;
   }
 });
 
 navButton.addEventListener("click", () => {
   container.classList.add("active");
+  header.classList.add("active");
   issidenavoped = true;
 });
 
 close.addEventListener("click", () => {
   container.classList.remove("active");
+  header.classList.remove("active");
   issidenavoped = false;
 });
 
@@ -114,5 +118,6 @@ const links = document.querySelectorAll(".sidenav ul li a");
 links.forEach((link) => {
   link.addEventListener("click", () => {
     container.classList.remove("active");
+    header.classList.remove("active");
   });
 });

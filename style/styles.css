@@ -260,6 +260,12 @@ navgation  */
 header {
   position: absolute;
   z-index: 999;
+  transform: translateX(-0px);
+  transition: transform 0.2s linear;
+}
+header.active {
+  transform: translateX(-350px);
+  transition: transform 0.2s linear;
 }
 header .center {
   justify-content: space-between;
@@ -373,7 +379,6 @@ svg rect {
   margin-top: 65px;
   gap: 48px;
   margin-bottom: 200px;
-
 }
 .collection .nft {
   transform: translateY(0px);
@@ -844,6 +849,7 @@ footer .bold {
   .flex-col {
     flex-direction: column;
   }
+
   header ul {
     display: none;
   }
