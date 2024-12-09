@@ -344,9 +344,15 @@ svg rect {
   font-size: 72px;
   font-weight: 700;
 }
+.hero .hero-image{
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+}
 .hero .images img {
   max-width: 600px;
   width: 80svw;
+
 }
 .collection .nfts img,
 .whys,
