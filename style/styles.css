@@ -344,7 +344,7 @@ svg rect {
   font-size: 72px;
   font-weight: 700;
 }
-.hero .hero-image{
+.hero .hero-image {
   aspect-ratio: auto;
   object-fit: contain;
   height: auto;
@@ -352,7 +352,6 @@ svg rect {
 .hero .images img {
   max-width: 600px;
   width: 80svw;
-
 }
 .collection .nfts img,
 .whys,
@@ -656,7 +655,15 @@ svg rect {
 }
 .lets-start {
   height: 633px;
-  background: url(../img/div.cta-bg.webp) center;
+  position: relative;
+}
+.lets-start .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 .lets-start .center {
   padding: 20px;
