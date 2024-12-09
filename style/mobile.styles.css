@@ -1,0 +1,250 @@
+@media (max-width: 1170px) {
+  header nav,
+  header ul {
+    display: none;
+  }
+  .hero .center .heading,
+  .main-header {
+    font-size: 40px;
+  }
+  .center,
+  header,
+  section {
+    width: 100%;
+    display: flex;
+  }
+  header,
+  section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .section-divider {
+    width: 100svw;
+    margin: 109px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .section-divider img {
+    width: 76px;
+  }
+  .main-header {
+    font-weight: 700;
+  }
+  .text-gradiant {
+    background: -webkit-linear-gradient(
+      45deg,
+      var(--priamry),
+      var(--secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .btn {
+    width: 226px;
+    height: 52px;
+    border-radius: 50px;
+    color: #fff;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 800;
+    font-size: 15px;
+    text-decoration: none;
+    background-image: linear-gradient(var(--priamry), var(--secondary));
+    justify-content: center;
+  }
+  .para-1,
+  .para-2 {
+    color: var(--text-light);
+  }
+  .roadmaps,
+  header .center {
+    padding: 20px;
+  }
+  .para-1 {
+    font-size: 17px;
+  }
+  .para-2 {
+    font-size: 19px;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  header ul {
+    gap: 20px;
+  }
+  header #side-nav-button {
+    display: block;
+  }
+  header .logo {
+    width: 113px;
+  }
+  header .social svg {
+    width: 25px;
+  }
+  .hero {
+    display: flex;
+  }
+  .hero .center {
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+  .hero .center .content {
+    margin-top: 140px;
+    gap: 23px;
+    align-items: center;
+  }
+  .hero .big {
+    font-size: 32px;
+  }
+  .hero .users img {
+    width: 45px;
+    height: 45px;
+  }
+  .hero .images img,
+  .how .center .step .content p,
+  .how .center .step .step-img {
+    width: 80vw;
+  }
+  .collection .nfts {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .collection .nfts p {
+    margin-bottom: 50px;
+  }
+  .how .center .step,
+  .why-page .center .whys {
+    flex-direction: column;
+    align-items: center;
+  }
+  .whys .why:nth-child(2n) {
+    margin-top: 0;
+  }
+  .numbers .center {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .numbers .center .number h1 {
+    font-size: 55px;
+  }
+  .how .center .step:nth-child(2) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .how .center .step .content {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .how .center .step .content h1 {
+    width: 80vw;
+    font-size: 40px;
+  }
+  .miss img {
+    width: 23px;
+  }
+  .miss .center form {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .roadmaps {
+    grid-template-columns: auto;
+  }
+  .cards {
+    justify-content: center;
+  }
+  .artist {
+    margin-top: 30px;
+  }
+  .lets-start .center {
+    align-items: center;
+  }
+  .lets-start .center h1 {
+    font-size: 46px;
+    width: 80svw;
+  }
+  footer .center {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  footer .center .col:first-child {
+    max-width: 372px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  footer ul {
+    justify-content: center;
+    margin-block: 1.5rem;
+  }
+}
+@media (max-width: 440px) {
+  footer ul {
+    align-items: center;
+    justify-content: center;
+  }
+  .hero img {
+    max-width: 80vw;
+  }
+  .collection .nfts {
+    width: 100%;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    padding-left: 425px;
+  }
+  .collection .nft {
+    min-width: 100svw;
+  }
+  .collection .nft:hover {
+    transform: translateX(0);
+  }
+  .collection .nft img {
+    width: 80svw;
+    height: 100svw;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .collection .scroll {
+    width: 50px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: var(--border);
+    margin: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: 0.5s;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .collection .scroll:hover {
+    scale: 1.2;
+  }
+  .collection .scroll::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 56px;
+    background-color: var(--border);
+    animation: 2s linear infinite animate;
+    margin-left: auto;
+  }
+  @keyframes animate {
+    to {
+      margin-left: 0;
+    }
+  }
+}

@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./style/mobile.styles.css"
+      media="(max-width: 1170px)"
+    />
     <meta
       property="og:image"
       content="https://landing-pagenft.netlify.app/img/cover.png"
@@ -19,6 +24,7 @@
     <div class="sidenav" id="side-nav">
       <div class="nav-header">
         <svg
+          title="home logo"
           width="120"
           height="36"
           viewBox="0 0 120 36"
@@ -58,8 +64,11 @@
             </clipPath>
           </defs>
         </svg>
-        <button id="close"><img src="./img/close.png" alt="" /></button>
-        <!-- <button id="nav-button"><img src="./img/close.png" alt="" /></button> -->
+
+        <button id="close">
+          <img loading="lazy" src="./img/close.png" alt="close-icon" />
+        </button>
+        <!-- <button id="nav-button"><img loading="lazy" src="./img/close.png" alt="" /></button> -->
       </div>
       <ul>
         <li><a href="#"> Home</a></li>
@@ -72,6 +81,7 @@
         <li>
           <a href="https://discord.com/invite/opensea?roistat_visit=1653191">
             <svg
+              title="discod"
               width="29"
               height="22"
               viewBox="0 0 29 22"
@@ -88,6 +98,7 @@
         <li>
           <a href="https://www.instagram.com/__nft__hub__/"
             ><svg
+              title="instagram"
               width="22"
               height="27"
               viewBox="0 0 22 27"
@@ -103,6 +114,7 @@
         <li>
           <a href="https://opensea.io/collection/eponym">
             <svg
+              title="opensea"
               width="25"
               height="27"
               viewBox="0 0 25 27"
@@ -119,6 +131,7 @@
         <li>
           <a href="https://x.com/NFTSHUB_">
             <svg
+              title="x"
               width="25"
               height="27"
               viewBox="0 0 25 27"
@@ -138,6 +151,7 @@
       <div class="center">
         <a href="/#"
           ><svg
+            title="home |logo"
             width="143"
             height="26"
             class="logo"
@@ -181,6 +195,7 @@
           <li>
             <a href="https://www.instagram.com/__nft__hub__/"
               ><svg
+                title="instagram-logo"
                 width="22"
                 height="27"
                 viewBox="0 0 22 27"
@@ -196,6 +211,7 @@
           <li>
             <a href="https://opensea.io/collection/eponym">
               <svg
+                title="opensea"
                 width="25"
                 height="27"
                 viewBox="0 0 25 27"
@@ -212,6 +228,7 @@
           <li>
             <a href="https://x.com/NFTSHUB_">
               <svg
+                title="x logo"
                 width="25"
                 height="27"
                 viewBox="0 0 25 27"
@@ -227,7 +244,12 @@
           </li>
           <li class="toggler" id="toogler">dark</li>
         </ul>
-        <img src="./img/menu.png" id="side-nav-button" alt="" />
+        <img
+          loading="lazy"
+          src="./img/menu.png"
+          id="side-nav-button"
+          alt="open-nav"
+        />
       </div>
     </header>
     <div class="container" id="container">
@@ -240,13 +262,14 @@
               Opensea.
             </p>
             <a href="https://opensea.io/collection/eponym/" class="btn">
-              View in OPENSEA <img src="./img/arro-top-right.png" alt=""
+              View in OPENSEA
+              <img loading="lazy" src="./img/arro-top-right.png" alt="go"
             /></a>
             <div class="comunity">
               <div class="users">
-                <img src="./img/01.png.png" alt="" />
-                <img src="./img/03.png.png" alt="" />
-                <img src="./img/07.png.png" alt="" />
+                <img loading="lazy" src="./img/01.png.png" alt="user-one" />
+                <img loading="lazy" src="./img/03.png.png" alt="user-two" />
+                <img loading="lazy" src="./img/07.png.png" alt="user-three" />
               </div>
               <div class="number">
                 <p class="big">47k+</p>
@@ -254,26 +277,31 @@
               </div>
             </div>
           </div>
-          <img src="./img/hero.png" alt="" />
+          <img loading="lazy" src="./img/hero.png" alt="hero image" />
         </div>
       </section>
-      <img src="./img/dark-mode-toggle.png" alt="" id="toggler" />
+      <img
+        loading="lazy"
+        src="./img/dark-mode-toggle.png"
+        alt="toogle-button"
+        id="toggler"
+      />
       <section class="trused">
-        <img src="./img/brand-1.png" alt="" />
-        <img src="./img/brand-2.png" alt="" />
-        <img src="./img/brand-3.png" alt="" />
-        <img src="./img/brand-4.png" alt="" />
-        <img src="./img/brand-5.png" alt="" />
+        <img loading="lazy" src="./img/brand-1.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-2.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-3.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-4.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-5.png" alt="brand" />
       </section>
       <section class="trused-dark">
-        <img src="./img/brand-1-dark.png" alt="" />
-        <img src="./img/brand-2-dark.png" alt="" />
-        <img src="./img/brand-3-dark.png" alt="" />
-        <img src="./img/brand-4-dark.png" alt="" />
-        <img src="./img/brand-5-dark.png" alt="" />
+        <img loading="lazy" src="./img/brand-1-dark.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-2-dark.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-3-dark.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-4-dark.png" alt="brand" />
+        <img loading="lazy" src="./img/brand-5-dark.png" alt="brand" />
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="divider" />
       </div>
       <section class="collection" id="collections">
         <div class="center flex-col">
@@ -282,35 +310,36 @@
           </h1>
           <div class="nfts" id="nfts">
             <div class="nft">
-              <img src="./img/nft-1.png" alt="" />
+              <img loading="lazy" src="./img/nft-1.png" alt="" />
               <h2>#Metaverse</h2>
               <p>By TheSalvare</p>
             </div>
 
             <div class="nft">
-              <img src="./img/nft-2.png" alt="" />
+              <img loading="lazy" src="./img/nft-2.png" alt="" />
               <h2>#Polly Doll</h2>
               <p>By TheNative</p>
             </div>
             <div class="nft">
-              <img src="./img/nft-3.png" alt="" />
+              <img loading="lazy" src="./img/nft-3.png" alt="" />
               <h2>#Alec Art</h2>
               <p>By GeorgZvic</p>
             </div>
             <div class="nft">
-              <img src="./img/nft-4.png" alt="" />
+              <img loading="lazy" src="./img/nft-4.png" alt="" />
               <h2>#Toxic Poeth</h2>
               <p>By YazoiLup</p>
             </div>
           </div>
           <div class="scroll"></div>
           <a href="https://opensea.io/collection/eponym/" class="btn"
-            >View collection <img src="./img/arro-top-right.png" alt=""
+            >View collection
+            <img loading="lazy" src="./img/arro-top-right.png" alt=""
           /></a>
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="why-page">
         <div class="center flex-col align-center">
@@ -319,7 +348,7 @@
           </h1>
           <div class="whys">
             <div class="why card">
-              <img src="./img/why-1.png" alt="" class="" />
+              <img loading="lazy" src="./img/why-1.png" alt="" class="" />
               <h2>Huge collection</h2>
               <p>
                 A collection of 890 unique Nerkos built to go beyond the digital
@@ -327,7 +356,7 @@
               </p>
             </div>
             <div class="why card">
-              <img src="./img/why-2.png" alt="" />
+              <img loading="lazy" src="./img/why-2.png" alt="" />
               <h2>High quality</h2>
               <p>
                 The nerko’s collection includes dozens of rare costumes ands
@@ -335,7 +364,7 @@
               </p>
             </div>
             <div class="why card">
-              <img src="./img/why-3.png" alt="" />
+              <img loading="lazy" src="./img/why-3.png" alt="" />
               <h2>Top resource</h2>
               <p>
                 Tasty design resources made with care for each pixel. NFTs and
@@ -343,7 +372,7 @@
               </p>
             </div>
             <div class="why card">
-              <img src="./img/why-4.png" alt="" />
+              <img loading="lazy" src="./img/why-4.png" alt="" />
               <h2>Big community</h2>
               <p>
                 Be part of a community of nerko owners and create user generated
@@ -354,12 +383,12 @@
         </div>
       </section>
       <div class="section-divider" id="numbers">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="numbers">
         <div class="center">
-          <img src="./img/bitcoin-01.png" alt="" />
-          <img src="./img/ethereum-1.png" alt="" />
+          <img loading="lazy" src="./img/bitcoin-01.png" alt="" />
+          <img loading="lazy" src="./img/ethereum-1.png" alt="" />
 
           <div class="number card">
             <h1><span> 400</span>k+</h1>
@@ -380,7 +409,7 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="how" id="how">
         <div class="center flex-col align-center">
@@ -389,7 +418,12 @@
           </h1>
           <div class="steps">
             <div class="step">
-              <img src="img/features-1.png" alt="" class="step-img" />
+              <img
+                loading="lazy"
+                src="img/features-1.png"
+                alt=""
+                class="step-img"
+              />
               <div class="content">
                 <p class="small">01</p>
                 <h1>Setup and connect your wallet.</h1>
@@ -448,10 +482,20 @@
                   </svg>
                 </a>
               </div>
-              <img src="img/features-2.png" alt="" class="step-img" />
+              <img
+                loading="lazy"
+                src="img/features-2.png"
+                alt=""
+                class="step-img"
+              />
             </div>
             <div class="step">
-              <img src="img/features-3.png" alt="" class="step-img" />
+              <img
+                loading="lazy"
+                src="img/features-3.png"
+                alt=""
+                class="step-img"
+              />
               <div class="content">
                 <p class="small">03</p>
                 <h1>Choose a platform to sell your NFT</h1>
@@ -484,14 +528,14 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="miss">
         <div class="center flex-col align-center">
-          <img src="./img/dcoin.png.png" alt="" />
-          <img src="./img/circle-01.png.png" alt="" />
-          <img src="./img/ethereum-02.png.png" alt="" />
-          <img src="./img/x.png.png" alt="" />
+          <img loading="lazy" src="./img/dcoin.png.png" alt="" />
+          <img loading="lazy" src="./img/circle-01.png.png" alt="" />
+          <img loading="lazy" src="./img/ethereum-02.png.png" alt="" />
+          <img loading="lazy" src="./img/x.png.png" alt="" />
           <h1 class="main-header">
             Never <span class="text-gradiant"> miss a drop! </span>
           </h1>
@@ -503,7 +547,7 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="roadmap" id="roadmap">
         <div class="center flex-col align-center">
@@ -599,7 +643,7 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
 
       <section class="artists" id="artists">
@@ -610,7 +654,7 @@
           <div class="cards">
             <div class="artist">
               <div class="imgcontainer">
-                <img src="./img/artist-2.png" alt="" />
+                <img loading="lazy" src="./img/artist-2.png" alt="" />
               </div>
               <h1>Steps Jobs</h1>
               <p>Artist</p>
@@ -618,6 +662,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="14"
                       height="15"
                       viewBox="0 0 14 15"
@@ -634,6 +679,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="19"
                       height="15"
                       viewBox="0 0 19 15"
@@ -650,6 +696,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="16"
                       height="13"
                       viewBox="0 0 16 13"
@@ -667,7 +714,7 @@
             </div>
             <div class="artist">
               <div class="imgcontainer">
-                <img src="./img/artist-4.png" alt="" />
+                <img loading="lazy" src="./img/artist-4.png" alt="" />
               </div>
               <h1>Steps Jobs</h1>
               <p>Artist</p>
@@ -675,6 +722,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="14"
                       height="15"
                       viewBox="0 0 14 15"
@@ -691,6 +739,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="19"
                       height="15"
                       viewBox="0 0 19 15"
@@ -707,6 +756,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="16"
                       height="13"
                       viewBox="0 0 16 13"
@@ -724,7 +774,7 @@
             </div>
             <div class="artist">
               <div class="imgcontainer">
-                <img src="./img/artist-1.png" alt="" />
+                <img loading="lazy" src="./img/artist-1.png" alt="" />
               </div>
               <h1>Andry Moray</h1>
               <p>Blockchain</p>
@@ -732,6 +782,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="14"
                       height="15"
                       viewBox="0 0 14 15"
@@ -748,6 +799,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="19"
                       height="15"
                       viewBox="0 0 19 15"
@@ -764,6 +816,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="16"
                       height="13"
                       viewBox="0 0 16 13"
@@ -781,7 +834,7 @@
             </div>
             <div class="artist">
               <div class="imgcontainer">
-                <img src="./img/artist-3.png" alt="" />
+                <img loading="lazy" src="./img/artist-3.png" alt="" />
               </div>
               <h1>Zaid Ed</h1>
               <p>Developer</p>
@@ -789,6 +842,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="14"
                       height="15"
                       viewBox="0 0 14 15"
@@ -805,6 +859,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="19"
                       height="15"
                       viewBox="0 0 19 15"
@@ -821,6 +876,7 @@
                 <li>
                   <a href="#">
                     <svg
+                      title="social"
                       width="16"
                       height="13"
                       viewBox="0 0 16 13"
@@ -840,7 +896,7 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
 
       <section class="faqs" id="faqs">
@@ -975,7 +1031,7 @@
         </div>
       </section>
       <div class="section-divider">
-        <img src="./img/section-divider.png" alt="" />
+        <img loading="lazy" src="./img/section-divider.png" alt="" />
       </div>
       <section class="lets-start">
         <div class="center flex-col align-center">
@@ -984,7 +1040,7 @@
           </h1>
           <p class="para-1">Invest and manage all your NFTs at one place.</p>
           <a href="https://opensea.io/collection/eponym/" class="btn">
-            Get started <img src="img/arro-top-right.png" alt=""
+            Get started <img loading="lazy" src="img/arro-top-right.png" alt=""
           /></a>
         </div>
       </section>
@@ -992,7 +1048,7 @@
       <footer>
         <div class="center">
           <div class="col">
-            <img src="./img/NFTHub.png" alt="" />
+            <img loading="lazy" src="./img/NFTHub.png" alt="" />
             <p class="para-1">
               Join our Discord channel or follow us on Twitter to keep up to
               date with our latest work and announcements.

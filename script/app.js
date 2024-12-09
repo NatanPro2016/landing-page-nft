@@ -1,123 +1,98 @@
-//hiddeng page loading animation
+// Hide page loading animation
 const loader = document.getElementById("loader");
+window.addEventListener("DOMContentLoaded", () => loader.classList.add("hide"));
 
-window.addEventListener("DOMContentLoaded", () => {
-  loader.classList.add("hide");
-});
-
-// creating accordions button functionality
-const panel = document.querySelectorAll(".panel");
-const accordions = document.querySelectorAll(".accordion");
-
-accordions.forEach((accordion, index) => {
+// Accordion functionality
+document.querySelectorAll(".accordion").forEach((accordion, index) => {
   accordion.addEventListener("click", () => {
     accordion.classList.toggle("active");
-    panel[index].classList.toggle("active");
+    document.querySelectorAll(".panel")[index].classList.toggle("active");
   });
 });
 
-// dark mode auto select and button
-let dark = window.matchMedia("(prefers-color-scheme : dark)").matches;
+// Dark mode auto-select and toggle button
+const darkModeToggler = document.getElementById("toggler");
+let isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-if (dark) {
-  document.body.setAttribute("data-theme", "dark");
-  toogler.classList.remove("dark");
-}
-
-const dark_mode_toogler = document.getElementById("toggler");
-
-dark_mode_toogler.addEventListener("click", () => {
-  if (dark) {
-    document.body.removeAttribute("data-theme", "dark");
-    dark = false;
-    toogler.classList.add("dark");
-  } else {
+const updateDarkMode = () => {
+  if (isDarkMode) {
     document.body.setAttribute("data-theme", "dark");
-    dark = true;
-    toogler.classList.remove("dark");
+    darkModeToggler.classList.remove("dark");
+  } else {
+    document.body.removeAttribute("data-theme");
+    darkModeToggler.classList.add("dark");
   }
+};
+
+darkModeToggler.addEventListener("click", () => {
+  isDarkMode = !isDarkMode;
+  updateDarkMode();
 });
 
-//creating the scroll reveal  animation
+updateDarkMode(); // Initialize dark mode based on the system's preference
 
+// Scroll reveal animation
 const cards = document.querySelectorAll(".card");
 const observer = new IntersectionObserver(
-  (entrys) => {
-    entrys.forEach((entry) => {
+  (entries) => {
+    entries.forEach((entry) => {
       entry.target.classList.toggle("show", entry.isIntersecting);
       if (entry.isIntersecting) observer.unobserve(entry.target);
     });
   },
-  {
-    threshold: 0.6,
-  }
+  { threshold: 0.6 }
 );
-cards.forEach((card) => {
-  observer.observe(card);
-});
+cards.forEach((card) => observer.observe(card));
 
-//creating the count up effect
-const numbers = document.querySelectorAll(".number");
-
-const numberObserver = new IntersectionObserver((enterys) => {
-  enterys.forEach(
-    (entery) => {
-      let number = entery.target.querySelector("span"); // entery.target.innerHTML
-      number = number?.innerText;
-      let count = 0;
-      console.log(count);
-      const increment = setInterval(() => {
-        if (count >= number) {
-          clearInterval(increment);
+// Count up effect
+document.querySelectorAll(".number").forEach((number) => {
+  const numberObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const targetNumber = parseInt(
+            entry.target.querySelector("span").innerText,
+            10
+          );
+          let count = 0;
+          const increment = setInterval(() => {
+            if (count >= targetNumber) {
+              clearInterval(increment);
+            }
+            entry.target.querySelector("span").innerText = count;
+            count++;
+          }, 1);
+          numberObserver.unobserve(entry.target);
         }
-        if (entery.target.querySelector("h1")) {
-          entery.target.querySelector("span").innerText = count;
-        }
-
-        count++;
-      }, 1);
-      numberObserver.unobserve(entery.target);
+      });
     },
-    {
-      threshold: 1,
-    }
+    { threshold: 1 }
   );
-});
-numbers.forEach((number) => {
+
   numberObserver.observe(number);
 });
 
-// navgation button
-
+// Navigation button
 const navButton = document.getElementById("side-nav-button");
 const container = document.getElementById("container");
 const close = document.getElementById("close");
 const header = document.querySelector("header");
-let issidenavoped = false;
-container.addEventListener("click", () => {
-  if (issidenavoped) {
-    container.classList.remove("active");
-    header.classList.remove("active");
-    issidenavoped = false;
-  }
+let isSideNavOpen = false;
+
+// Unified function to toggle the side nav
+const toggleSideNav = (isOpen) => {
+  container.classList.toggle("active", isOpen);
+  header.classList.toggle("active", isOpen);
+  isSideNavOpen = isOpen;
+};
+
+navButton.addEventListener("click", () => toggleSideNav(true));
+close.addEventListener("click", () => toggleSideNav(false));
+document.getElementById("container").addEventListener("click", () => {
+  if (isSideNavOpen) toggleSideNav(false);
 });
 
-navButton.addEventListener("click", () => {
-  container.classList.add("active");
-  header.classList.add("active");
-  issidenavoped = true;
-});
-
-close.addEventListener("click", () => {
-  container.classList.remove("active");
-  header.classList.remove("active");
-  issidenavoped = false;
-});
-
-const links = document.querySelectorAll(".sidenav ul li a");
-links.forEach((link) => {
-  link.addEventListener("click", () => {
-    container.classList.remove("active");
-    header.classList.remove("active");
-  });
+// Close side nav on link click
+document.querySelectorAll(".sidenav ul li a").forEach((link) => {
+  link.addEventListener("click", () => toggleSideNav(false));
 });
