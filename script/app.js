@@ -44,33 +44,6 @@ const observer = new IntersectionObserver(
 );
 cards.forEach((card) => observer.observe(card));
 
-// Count up effect
-document.querySelectorAll(".number").forEach((number) => {
-  const numberObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const targetNumber = parseInt(
-            entry.target.querySelector("span").innerText,
-            10
-          );
-          let count = 0;
-          const increment = setInterval(() => {
-            if (count >= targetNumber) {
-              clearInterval(increment);
-            }
-            entry.target.querySelector("span").innerText = count;
-            count++;
-          }, 1);
-          numberObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 1 }
-  );
-
-  numberObserver.observe(number);
-});
 
 // Navigation button
 const navButton = document.getElementById("side-nav-button");
